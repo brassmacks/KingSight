@@ -1,0 +1,54 @@
+entry /* <html>
+      link:  --> X 
+        style(s):main
+                :board
+                :UI
+                :animations:possibly
+        /*temp
+        scripts: Jquery --> X 
+                  Chessboard.js
+                  chess.js
+        Import: routes lib/strategies
+        */
+
+        /tbd* ks/KingSight/main - central script for all functionality
+            main/KingSight.js=> replace when unified
+         */ --> X 
+      <div main> -> HANDLE -> LAYOUT --> X 
+          body, bground, border, margins, padding, resize/
+      header <nav> -> HANDLE -> COMPONENET/PARTIAL gameplay, howto, about, help... tbd  --> X
+      Body <modals> -> HANDLE -> PARTIALS welcome/  help/  about/ --> X
+                                          /KingSight-> what, why, who, howto--> X 
+                                          / Me-> --> X 
+                                              story, love of chess
+                                               -> links gh, LndIn, --> X 
+                                                  port-in progress
+            <board> -> IN PAGE -> ks.js, size, position, align items, justify content/ self
+
+              squares, pieces, buttons, UI-gen --> TODO 11/10/21 OUTLINE AND SKELETON
+      footer <nav> -> HANDLE -> PARTIAL source code, creator, technologies used  --> X
+      </html>
+
+    */ 
+
+routes /* --> X 
+  import scripts/ helpers/ partials/ layouts? 
+  import routes/ strategies lib ? 
+  main -> layout 
+  home/splash-> title -> welcome/rundown -> howto 
+  home/main-> no modal -> inpage render
+  modals help/ routes/ about/ more info* ref main html
+
+  // potentially blend all scripts into one and execute
+  Create server
+
+  */
+
+HANDLE
+  <main> layout -> board bones  --> X
+  PARTIALS  -> --> X
+    MODALS -> SEE ROUTES/main
+    UI -> SEE MAIN, BUILD FUNCTIONALITY --> X
+    <header> -> nav --> X
+    <footer> -> nav --> X
+

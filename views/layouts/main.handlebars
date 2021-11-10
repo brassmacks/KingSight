@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KingSight </title>
+    {{{_sections.head}}}
+    <link rel="stylesheet" href="/stylesheets/chessboard-main.css">
+    <link rel="stylesheet" href="/stylesheets/chessboard-min.css">
+    {{!--
+     COMBINE CHESSBOARD STYLES 
+    <link rel="stylesheet" href="/stylesheets/chessboard.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/UI.css">
+    <link rel="stylesheet" href="/animations.css"> => tbd
+     --}}
+
+  </head>
+  <body>
+    {{!-- <div id="-wrapper" class="container"></div> --}}
+    <div id="scripts-wrapper" class="container"> 
+              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+              <script src="/scripts/chessboard-1.0.0.js"></script>
+              <script src="/scripts/chess.js"></script>
+              {{!-- possible =?> {{{_sections.scripts}}}
+               <script src="/scripts/routeLib.js"></script> 
+              --}}
+    </div>
+    <div id="head-wrapper" class="container">
+
+      {{!-- <header><nav>
+        <ul>
+          magic mustache import
+        </ul>
+      </nav></header> --}}
+      
+    </div>
+    {{!-- import modal component based of route --}}
+    <div id="background-wrapper" class="container">
+      <div id="title-wrapper" class="container"></div>
+        <div id="modal-wrapper" class="container"></div>
+        <div id="UI-wrapper" class="container"></div>
+        <div id="body-contents" class="container">
+      <div id="board-wrapper" class="container">
+
+          {{{_sections.scripts}}}
+          {{{body}}}
+        </div>
+      </div>
+    </div>
+    <div id="foot-wrapper" class="container">
+      {{!-- <footer><nav>
+        <ul>
+          magic mustache import
+        </ul>
+      </nav></footer> --}}
+    </div>
+  </body>
+</html>

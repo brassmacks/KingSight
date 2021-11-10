@@ -1,0 +1,34 @@
+{{!-- add styling/ wrapper divs --}}
+{{!-- TODO 11/10/21 --}}
+<h1>Welcome to KingSight</h1>
+<div id="board" style="width: 400px"></div>
+<button id="startBtn">Start Position</button>
+<button id="clearBtn">Clear Board</button>
+
+<script>
+
+  function onMoveEnd(oldPos, newPos) {
+      console.log('Move animation complete:')
+      let setup = Chessboard.objToFen(oldPos)
+      let build = Chessboard.objToFen(newPos)
+      console.log('Old position: ' + setup)
+      console.log('New position: ' + Chessboard.objToFen(newPos))
+      let game = new Chess()
+      console.log(game)
+      console.log(game.moves())
+      console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+    }
+
+    var config = {
+        draggable: true,
+        dropOffBoard: 'trash',
+        sparePieces: true,
+        onMoveEnd: onMoveEnd
+      }
+  let boardHouse = document.getElementById('board')
+  
+  let board = Chessboard("board", config)
+  $('#startBtn').on('click', board.start)
+  $('#clearBtn').on('click', board.clear)
+</script>
+
